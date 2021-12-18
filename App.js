@@ -2,7 +2,6 @@
 // LINK: https://github.com/oblador/react-native-vector-icons/blob/master/glyphmaps/Ionicons.json
 
 import React from 'react';
-import { View, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -42,7 +41,9 @@ function Tabs() {
         })}
       >
         <Tab.Screen name='Home' component={Home} />
-        <Tab.Screen name='Settings' component={Settings} />
+        <Tab.Screen name='Settings' component={Settings} 
+          initialParams={{nome: Autentication.name}}
+        />
         <Tab.Screen name="About" component={About}/> 
       </Tab.Navigator>
   )
@@ -51,21 +52,51 @@ function Tabs() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Autentication'>
         <Stack.Screen 
           name="Home" 
           component={Tabs}
           options={{
             title: 'Bem-vindo',
             headerStyle: {
-              backgroundColor: '#121212'
+              backgroundColor: '#000814'
             },
-            headerTintColor: '#FFF'
+            headerTintColor: '#ffc300'
           }} 
         />
-        <Stack.Screen name="Autentication" component={Autentication} />
-        <Stack.Screen name="Imc" component={Imc} />
-        <Stack.Screen name="Termometro" component={Termometro} />
+        <Stack.Screen 
+          name="Autentication" 
+          component={Autentication} 
+          options={{
+            title: 'Autenticação',
+            headerStyle: {
+              backgroundColor: '#000814'
+            },
+            headerTintColor: '#ffc300'
+          }}
+        />
+        <Stack.Screen 
+          name="Imc" 
+          component={Imc} 
+          options={{
+            title: 'IMC',
+            headerStyle: {
+              backgroundColor: '#000814'
+            },
+            headerTintColor: '#ffc300'
+          }}
+        />
+        <Stack.Screen 
+          name="Termometro" 
+          component={Termometro} 
+          options={{
+            title: 'Termômetro',
+            headerStyle: {
+              backgroundColor: '#000814'
+            },
+            headerTintColor: '#ffc300'
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

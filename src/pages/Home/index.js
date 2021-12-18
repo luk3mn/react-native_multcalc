@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default function Home({navigation}) {
   return (
@@ -14,14 +14,14 @@ export default function Home({navigation}) {
           style={estilo.button}
           onPress={() => navigation.navigate('Termometro')}
         >Termômetro</Text>
-        <Text
+        {/* <Text
           style={estilo.button}
           onPress={() => navigation.navigate('Tip')}
         >Gorjeta</Text>
         <Text
           style={estilo.button}
           onPress={() => navigation.navigate('Math')}
-        >Matemática</Text>
+        >Matemática</Text> */}
       </View>
     </View>
   )
@@ -29,7 +29,8 @@ export default function Home({navigation}) {
 
 const estilo = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#000814"
   },
   boxCalc: {
     flex: 1
@@ -39,9 +40,11 @@ const estilo = StyleSheet.create({
     fontWeight: 600,
     textAlign: 'center',
     margin: 10,
+    color: "#fff"
   },
   button: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#ffc300',
+    color: "#001d3d",
     margin: 15,
     padding: 20,
     borderRadius: 15,

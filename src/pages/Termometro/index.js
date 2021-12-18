@@ -44,32 +44,35 @@ export default function Termometro() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1faee',
+    backgroundColor: '#001d3d',
     alignItems: 'center',
     paddingHorizontal: 15,
   },
   title: {
-    fontSize: 20,
-    fontWeight: 600,
-    color: "#e63946",
-    marginVertical: 15,
+    textAlign: 'center',
+    marginVertical: 25,
+    fontSize: 27,
+    color: "#ffc300"
   },
   input: {
     width: "100%",
     borderRadius: 8,
-    padding: 8,
+    padding: 10,
     textAlign: "center",
-    backgroundColor: "#ddd",
+    backgroundColor: "#FFF",
+    color: "#001d3d",
+    fontSize: 23
   },
   btnText: {
-    color: "#1d3557",
+    color: '#001d3d',
     fontWeight: 700,
+    fontSize: 25,
   },
   button: {
     width: "100%",
-    backgroundColor: "#a8dadc",
+    backgroundColor: '#ffc300',
     borderRadius: 8,
-    padding: 8,
+    padding: 10,
     textAlign: "center",
     marginVertical: 5
   },
@@ -79,8 +82,8 @@ const styles = StyleSheet.create({
   },
   result: {
     textAlign: "center",
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 600,
-    color: "#1d3557"
+    color: "#FFF"
   }
 });

@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
+
 export default function Autentication({navigation}) {
+  
+  const [name, setName] = useState('');
+  
   return (
     <View style={estilo.container}>
       <TextInput
         style={estilo.input}
-        placeholder='usuário'
+        value={name}
+        onChangeText={ (name) => setName(name) }
+        placeholder='Infore seu nome'
       />
-      <TextInput
+      {/* <TextInput
         style={estilo.input}
         placeholder='Senha'
         secureTextEntry={true}
-      />
-      <TouchableOpacity style={estilo.button}>
+      /> */}
+      <TouchableOpacity 
+        style={estilo.button}
+        onPress={ () => navigation.navigate('Home')}
+      >
         <Text style={estilo.bntText}>Entrar</Text>
       </TouchableOpacity>
       <Text
         style={estilo.movingHome}
         onPress={ () => navigation.navigate('Home')}
-      >Entrar sem login</Text>
+      >Entrar sem nome</Text>
     </View>
   );
 }
@@ -28,19 +37,21 @@ const estilo = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 25
+    paddingHorizontal: 25,
+    backgroundColor: '#001d3d'
   },
   input: {
     marginVertical: 6,
     padding: 10,
     borderRadius: 10,
-    border: 'solid red',
+    border: 'solid #ffc300',
     textAlign: 'center',
     fontSize: 17,
-    fontWeight: 500
+    fontWeight: 500,
+    color: "#FFF",
   },
   button: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#ffc300',
     width: 100,
     padding: 4,
     borderRadius: 7,
@@ -48,11 +59,14 @@ const estilo = StyleSheet.create({
   },
   bntText: {
     fontSize: 16,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 700,
+    color: '#000814'
   },
   movingHome: {
     textAlign: 'center',
     marginTop: 20,
-    color: "#000fff"
+    color: "#fff",
+    fontWeight: 700,
   }
 })

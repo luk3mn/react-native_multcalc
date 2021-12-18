@@ -59,30 +59,34 @@ export default function Imc() {
 
 const estilo = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#001d3d"
   },
   title: {
     textAlign: 'center',
     marginTop: 25,
-    fontSize: 30
+    fontSize: 30,
+    color: "#ffc300"
   },
   input: {
-    backgroundColor: '#DDD',
+    backgroundColor: '#FFF',
     borderRadius: 10,
     margin: 15,
     padding: 10,
-    color: '#000',
+    color: '#001d3d',
     fontSize: 23
   },
   botao: {
     justifyContent: 'center',
     alignItems: 'center',
     margin: 15,
-    backgroundColor: '#41AEF4',
-    padding: 10
+    backgroundColor: '#ffc300',
+    padding: 10,
+    borderRadius: 10,
   },
   textoBotao: {
-    color: '#FFF',
-    fontSize: 25
+    color: '#001d3d',
+    fontSize: 25,
+    fontWeight: 700,
   }
 });
