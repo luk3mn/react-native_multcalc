@@ -38,6 +38,7 @@ export default function Imc() {
         value={peso}         // valor dentro do componente
         onChangeText={ (peso) => setPeso(peso) } // toda vez que o campo mudar ele é salvo
         placeholder="Peso (Kg)"
+        placeholderTextColor={"#001d3d"}
         keyboardType="numeric"
       />
 
@@ -46,6 +47,7 @@ export default function Imc() {
         value={altura}         // valor dentro do componente
         onChangeText={ (altura) => setAltura(altura) } // toda vez que o campo mudar ele é salvo
         placeholder="Altura (cm)"
+        placeholderTextColor={"#001d3d"}
         keyboardType="numeric"
       />
 
@@ -66,14 +68,15 @@ const estilo = StyleSheet.create({
     textAlign: 'center',
     marginTop: 25,
     fontSize: 30,
-    color: "#ffc300"
+    color: "#ffc300",
   },
   input: {
     backgroundColor: '#FFF',
     borderRadius: 10,
     margin: 15,
     padding: 10,
-    color: '#001d3d',
+    color: "#ffc300",
+    fontWeight: "700",
     fontSize: 23
   },
   botao: {
@@ -87,6 +90,6 @@ const estilo = StyleSheet.create({
   textoBotao: {
     color: '#001d3d',
     fontSize: 25,
-    fontWeight: 700,
+    fontWeight: 'bold',
   }
 });

@@ -37,7 +37,7 @@ const estilo = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    fontWeight: 600,
+    fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
     color: "#fff"
@@ -50,6 +50,6 @@ const estilo = StyleSheet.create({
     borderRadius: 15,
     textAlign: 'center',
     fontSize: 20,
-    fontWeight: 600,
+    fontWeight: 'bold',
   }
 })

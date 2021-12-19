@@ -13,6 +13,7 @@ export default function Autentication({navigation}) {
         value={name}
         onChangeText={ (name) => setName(name) }
         placeholder='Infore seu nome'
+        placeholderTextColor={'#FFF'}
       />
       {/* <TextInput
         style={estilo.input}
@@ -44,11 +45,12 @@ const estilo = StyleSheet.create({
     marginVertical: 6,
     padding: 10,
     borderRadius: 10,
-    border: 'solid #ffc300',
+    borderWidth: 3,
+    borderColor: '#ffc300',
     textAlign: 'center',
     fontSize: 17,
-    fontWeight: 500,
-    color: "#FFF",
+    fontWeight: 'bold',
+    color: "#FFF"
   },
   button: {
     backgroundColor: '#ffc300',
@@ -60,13 +62,13 @@ const estilo = StyleSheet.create({
   bntText: {
     fontSize: 16,
     textAlign: 'center',
-    fontWeight: 700,
+    fontWeight: 'bold',
     color: '#000814'
   },
   movingHome: {
     textAlign: 'center',
     marginTop: 20,
     color: "#fff",
-    fontWeight: 700,
+    fontWeight: 'bold',
   }
 })

@@ -26,6 +26,7 @@ export default function Termometro() {
         value={celsius}
         onChangeText={ (celsius) => setCelsisus(celsius)}
         placeholder="Informe a temperatura em °C"
+        placeholderTextColor={"#001d3d"}
         keyboardType="numeric"
       />
       <TouchableOpacity style={styles.button}
@@ -60,12 +61,12 @@ const styles = StyleSheet.create({
     padding: 10,
     textAlign: "center",
     backgroundColor: "#FFF",
-    color: "#001d3d",
+    color: "#ffc300",
     fontSize: 23
   },
   btnText: {
     color: '#001d3d',
-    fontWeight: 700,
+    fontWeight: 'bold',
     fontSize: 25,
   },
   button: {
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
   result: {
     textAlign: "center",
     fontSize: 20,
-    fontWeight: 600,
+    fontWeight: '600',
     color: "#FFF"
   }
 });
